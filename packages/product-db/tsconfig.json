@@ -1,0 +1,3 @@
+{
+  "extends": "@tsenako/typescript-config/base.json"
+}

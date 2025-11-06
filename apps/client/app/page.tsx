@@ -1,7 +1,13 @@
+import { ProductList } from "@/components";
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="w-full h-screen flex items-center justify-center">
-      <h1 className="text-2xl">Client application</h1>
-    </main>
+    <article>
+      <div className="relative aspect-3/1 mb-12">
+        <Image src="/featured.png" alt="Featured Product" fill />
+      </div>
+      <ProductList />
+    </article>
   );
 }

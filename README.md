@@ -20,45 +20,45 @@ It’s an experimental **e-commerce platform** that serves as a practical playgr
 
 ## Project Goals
 
-* **Learn microservices architecture** : split the e-commerce logic into independent, domain-driven services (auth, products, payments, orders, etc.)
-* **Experiment with Kafka** : handle asynchronous communication and real-time event streaming between services
-* **Master monorepo workflows** : use **Turborepo** to efficiently manage shared packages, services, and build pipelines
-* **Hands-on experience with modern web and backend frameworks** : explore the ecosystem around **Node.js**, **TypeScript**, and **React**
+- **Learn microservices architecture** : split the e-commerce logic into independent, domain-driven services (auth, products, payments, orders, etc.)
+- **Experiment with Kafka** : handle asynchronous communication and real-time event streaming between services
+- **Master monorepo workflows** : use **Turborepo** to efficiently manage shared packages, services, and build pipelines
+- **Hands-on experience with modern web and backend frameworks** : explore the ecosystem around **Node.js**, **TypeScript**, and **React**
 
 ## Core Technologies
 
 ### Frontend
 
-* **React** : core UI library
-* **Next.js** : for SSR, routing, and API routes
-* **TypeScript** : static typing for better DX and scalability
-* **Turborepo** : monorepo management (pipelines, caching, parallel builds)
+- **React** : core UI library
+- **Next.js** : for SSR, routing, and API routes
+- **TypeScript** : static typing for better DX and scalability
+- **Turborepo** : monorepo management (pipelines, caching, parallel builds)
 
 ### Backend / Services
 
-* **Node.js** : runtime environment
-* **Express**, **Hono**, **Fastify** : various backend frameworks to explore different styles of API building
-* **Kafka** : message broker for inter-service communication and event streaming
-* **REST / gRPC (optional)** : service-to-service communication patterns
-* **PostgreSQL / MongoDB** : data persistence depending on the service domain
-* **Redis** : caching and session management
+- **Node.js** : runtime environment
+- **Express**, **Hono**, **Fastify** : various backend frameworks to explore different styles of API building
+- **Kafka** : message broker for inter-service communication and event streaming
+- **REST / gRPC (optional)** : service-to-service communication patterns
+- **PostgreSQL / MongoDB** : data persistence depending on the service domain
+- **Redis** : caching and session management
 
 ### DevOps & Tooling
 
-* **Docker** : containerization for all services
-* **Docker Compose** : local environment orchestration
-* **Turborepo Pipelines** : building, linting, testing, and deploying services
-* **ESLint / Prettier** : code quality and style consistency
-* **pnpm** : efficient dependency management
+- **Docker** : containerization for all services
+- **Docker Compose** : local environment orchestration
+- **Turborepo Pipelines** : building, linting, testing, and deploying services
+- **ESLint / Prettier** : code quality and style consistency
+- **pnpm** : efficient dependency management
 
 ## Key Concepts to Explore
 
-* Event-driven microservices with **Kafka producers and consumers**
-* Request-response vs asynchronous communication
-* Shared libraries and cross-service type safety in a **TypeScript monorepo**
-* Efficient build and deploy workflows with **Turborepo caching and tasks**
-* API Gateway and service discovery patterns
-* Scalable authentication and payment integration
+- Event-driven microservices with **Kafka producers and consumers**
+- Request-response vs asynchronous communication
+- Shared libraries and cross-service type safety in a **TypeScript monorepo**
+- Efficient build and deploy workflows with **Turborepo caching and tasks**
+- API Gateway and service discovery patterns
+- Scalable authentication and payment integration
 
 ## Planned Services
 
@@ -77,10 +77,10 @@ Tsenako isn’t about building a production-ready e-commerce platform — it’s
 
 The focus areas are:
 
-* **Microservice architecture** design and coordination
-* **Event-driven data flow** with Kafka
-* **Monorepo setup** with isolated builds and shared types
-* **Exploration of multiple backend frameworks** under one architecture
+- **Microservice architecture** design and coordination
+- **Event-driven data flow** with Kafka
+- **Monorepo setup** with isolated builds and shared types
+- **Exploration of multiple backend frameworks** under one architecture
 
 ## Setup (WIP)
 

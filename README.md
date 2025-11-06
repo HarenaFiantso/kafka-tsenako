@@ -1,135 +1,96 @@
-# Turborepo starter
+# 🛍️ Tsenako
 
-This Turborepo starter is maintained by the Turborepo core team.
+**Tsenako** is a side project designed to explore and master **microservice architecture**, **event-driven communication with Kafka**, and **monorepo management using Turborepo**.
+It’s an experimental **e-commerce platform** that serves as a practical playground for learning how to structure, scale, and orchestrate distributed services efficiently.
 
-## Using this example
+[![Node.js](https://img.shields.io/badge/Node.js-v22.16.0-green?logo=nodedotjs)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-v5.6-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-v19.0.0-61dafb?logo=react)](https://react.dev/)
+[![Next.js](https://img.shields.io/badge/Next.js-v15.0.0-black?logo=nextdotjs)](https://nextjs.org/)
+[![Express](https://img.shields.io/badge/Express-v5.1.0-white?logo=express)](https://expressjs.com/)
+[![Fastify](https://img.shields.io/badge/Fastify-v5.0.0-lightgrey?logo=fastify)](https://fastify.dev/)
+[![Hono](https://img.shields.io/badge/Hono-v4.0.0-orange?logo=hono)](https://hono.dev/)
 
-Run the following command:
+[![Kafka](https://img.shields.io/badge/Kafka-Event--Streaming-black?logo=apachekafka)](https://kafka.apache.org/)
+[![Turborepo](https://img.shields.io/badge/Turborepo-Monorepo%20Manager-%23000000?logo=turborepo)](https://turbo.build/)
+[![Docker](https://img.shields.io/badge/Docker-Containerization-blue?logo=docker)](https://www.docker.com/)
 
-```sh
-npx create-turbo@latest
-```
+> [!IMPORTANT]
+> Tsenako is under active development and not yet production-ready.
 
-## What's inside?
+## Project Goals
 
-This Turborepo includes the following packages/apps:
+* **Learn microservices architecture** : split the e-commerce logic into independent, domain-driven services (auth, products, payments, orders, etc.)
+* **Experiment with Kafka** : handle asynchronous communication and real-time event streaming between services
+* **Master monorepo workflows** : use **Turborepo** to efficiently manage shared packages, services, and build pipelines
+* **Hands-on experience with modern web and backend frameworks** : explore the ecosystem around **Node.js**, **TypeScript**, and **React**
 
-### Apps and Packages
+## Core Technologies
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Frontend
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+* **React** : core UI library
+* **Next.js** : for SSR, routing, and API routes
+* **TypeScript** : static typing for better DX and scalability
+* **Turborepo** : monorepo management (pipelines, caching, parallel builds)
 
-### Utilities
+### Backend / Services
 
-This Turborepo has some additional tools already setup for you:
+* **Node.js** : runtime environment
+* **Express**, **Hono**, **Fastify** : various backend frameworks to explore different styles of API building
+* **Kafka** : message broker for inter-service communication and event streaming
+* **REST / gRPC (optional)** : service-to-service communication patterns
+* **PostgreSQL / MongoDB** : data persistence depending on the service domain
+* **Redis** : caching and session management
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### DevOps & Tooling
 
-### Build
+* **Docker** : containerization for all services
+* **Docker Compose** : local environment orchestration
+* **Turborepo Pipelines** : building, linting, testing, and deploying services
+* **ESLint / Prettier** : code quality and style consistency
+* **pnpm** : efficient dependency management
 
-To build all apps and packages, run the following command:
+## Key Concepts to Explore
 
-```
-cd my-turborepo
+* Event-driven microservices with **Kafka producers and consumers**
+* Request-response vs asynchronous communication
+* Shared libraries and cross-service type safety in a **TypeScript monorepo**
+* Efficient build and deploy workflows with **Turborepo caching and tasks**
+* API Gateway and service discovery patterns
+* Scalable authentication and payment integration
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
+## Planned Services
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
-```
+| Service           | Description                                        | Framework         |
+| ----------------- | -------------------------------------------------- | ----------------- |
+| `auth-service`    | Handles signup, login, JWT, and user sessions      | Hono / Express    |
+| `product-service` | Manages product catalog, inventory, and categories | Fastify           |
+| `order-service`   | Handles orders, carts, and checkout flow           | Express           |
+| `payment-service` | Integrates with external payment providers         | Hono              |
+| `gateway`         | Central API entry point and reverse proxy          | Express / Fastify |
+| `web`             | Frontend for user interaction and shopping UI      | Next.js + React   |
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+## Learning Focus
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+Tsenako isn’t about building a production-ready e-commerce platform — it’s about **learning how to structure and connect multiple moving parts** efficiently and cleanly.
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+The focus areas are:
 
-### Develop
+* **Microservice architecture** design and coordination
+* **Event-driven data flow** with Kafka
+* **Monorepo setup** with isolated builds and shared types
+* **Exploration of multiple backend frameworks** under one architecture
 
-To develop all apps and packages, run the following command:
+## Setup (WIP)
 
-```
-cd my-turborepo
+```bash
+git clone https://github.com/HarenaFiantso/tsenako.git
+cd tsenako
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
+pnpm install
+
 turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+Each service will run independently with its own Docker setup and Kafka instance for local testing.
